@@ -1,0 +1,64 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.simonkay.fubar.Details">
+
+    <TextView
+        android:id="@+id/BarName"
+        android:text="Bar Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/Street"
+        android:text="Street"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/BarName"/>
+    <TextView
+        android:id="@+id/City"
+        android:text="City"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Street"/>
+    <TextView
+        android:id="@+id/State"
+        android:text="State"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/City"  />
+    <TextView
+        android:id="@+id/Zip"
+        android:text="Zip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/State"/>
+    <TextView
+        android:id="@+id/Special1"
+        android:text="Special1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Zip"/>
+    <TextView
+        android:id="@+id/Special2"
+        android:text="Special2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Special1"/>
+    <TextView
+        android:id="@+id/Special3"
+        android:text="Special3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Special2"/>
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/map"
+        android:layout_width="1000px"
+        android:layout_height="1000px"
+        class="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_below="@+id/Special3"/>
+
+</RelativeLayout>
