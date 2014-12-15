@@ -84,7 +84,8 @@ public class Details extends ActionBarActivity implements OnMapReadyCallback {
                    if(geocoder.isPresent() && parseObject.getString("Address") != "")
                    {
                        try {
-                           List<Address> addressList = geocoder.getFromLocationName(parseObject.getString("Address"),1);
+                           String fullAddress = parseObject.getString("Address") + parseObject.getString("City") + parseObject.getString("State");
+                           List<Address> addressList = geocoder.getFromLocationName(fullAddress,1);
                            Address address = addressList.get(0);
                            double lat = address.getLatitude();
                            double lng = address.getLongitude();
@@ -92,7 +93,7 @@ public class Details extends ActionBarActivity implements OnMapReadyCallback {
                            builder.include(new LatLng(lat,lng));
                            map.addMarker(new MarkerOptions().position(new LatLng(lat,lng)) );
                            LatLngBounds bounds = builder.build();
-                           int padding = 0;
+                           int padding = 5;
                            CameraUpdate cu = CameraUpdateFactory.newLatLngBounds(bounds, padding);
                            map.moveCamera(cu);
                            map.animateCamera(cu);
