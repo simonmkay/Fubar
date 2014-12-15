@@ -48,7 +48,7 @@ public class Details extends ActionBarActivity implements OnMapReadyCallback {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_details);
-//      getActionBar().setDisplayHomeAsUpEnabled(true);
+        //getActionBar().setDisplayHomeAsUpEnabled(true);
         textViewName = (TextView)findViewById(R.id.BarName);
         textViewStreet = (TextView)findViewById(R.id.Street);
         textViewCity = (TextView)findViewById(R.id.City);

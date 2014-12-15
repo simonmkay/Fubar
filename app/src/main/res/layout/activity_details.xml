@@ -11,61 +11,61 @@
         android:text="Bar Name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="24sp"/>
+        android:textSize="18sp"/>
     <TextView
         android:id="@+id/Street"
         android:text="Street"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/BarName"
-        android:textSize="24sp"/>
+        android:textSize="18sp"/>
     <TextView
         android:id="@+id/City"
         android:text="City"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/Street"
-        android:textSize="24sp"/>
+        android:textSize="18sp"/>
     <TextView
         android:id="@+id/State"
         android:text="State"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/City"
-        android:textSize="24sp"/>
+        android:textSize="18sp"/>
     <TextView
         android:id="@+id/Zip"
         android:text="Zip"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/State"
-        android:textSize="24sp"/>
+        android:textSize="18sp"/>
     <TextView
         android:id="@+id/Special1"
         android:text="Special"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/Zip"
-        android:textSize="24sp"/>
+        android:textSize="18sp"/>
     <TextView
         android:id="@+id/Special2"
         android:text="Special"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/Special1"
-        android:textSize="24sp"/>
+        android:textSize="18sp"/>
     <TextView
         android:id="@+id/Special3"
         android:text="Special"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/Special2"
-        android:textSize="24sp"/>
+        android:textSize="18sp"/>
 
     <fragment xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/map"
-        android:layout_width="750px"
-        android:layout_height="750px"
+        android:layout_width="match_parent"
+        android:layout_height="1000px"
         class="com.google.android.gms.maps.SupportMapFragment"
         android:layout_below="@+id/Special3"/>
 

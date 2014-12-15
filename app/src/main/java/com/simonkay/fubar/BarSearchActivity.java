@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -11,10 +12,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 
+import com.parse.ParseTwitterUtils;
+import com.parse.ParseUser;
+import com.parse.SaveCallback;
+
+import java.text.ParseException;
+
 
 public class BarSearchActivity extends ActionBarActivity {
-
-    private String city;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
