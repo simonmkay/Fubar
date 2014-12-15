@@ -9,11 +9,15 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.location.Geocoder;
 import android.widget.TextView;
+
+import com.google.android.gms.maps.CameraUpdate;
+import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.parse.FindCallback;
 import com.parse.GetCallback;
@@ -84,7 +88,14 @@ public class Details extends ActionBarActivity implements OnMapReadyCallback {
                            Address address = addressList.get(0);
                            double lat = address.getLatitude();
                            double lng = address.getLongitude();
+                           LatLngBounds.Builder builder = new LatLngBounds.Builder();
+                           builder.include(new LatLng(lat,lng));
                            map.addMarker(new MarkerOptions().position(new LatLng(lat,lng)) );
+                           LatLngBounds bounds = builder.build();
+                           int padding = 0;
+                           CameraUpdate cu = CameraUpdateFactory.newLatLngBounds(bounds, padding);
+                           map.moveCamera(cu);
+                           map.animateCamera(cu);
                        } catch (IOException e1) {
                            e1.printStackTrace();
                        }
