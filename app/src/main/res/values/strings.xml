@@ -7,5 +7,6 @@
     <string name="title_activity_add_bar">Add Bar</string>
     <string name="title_activity_bar_list">Bar List</string>
     <string name="title_activity_details">Details</string>
+    <string name="title_activity_twitter_login">TwitterLogin</string>
 
 </resources>

@@ -93,10 +93,10 @@ public class Details extends ActionBarActivity implements OnMapReadyCallback {
                            builder.include(new LatLng(lat,lng));
                            map.addMarker(new MarkerOptions().position(new LatLng(lat,lng)) );
                            LatLngBounds bounds = builder.build();
-                           int padding = 5;
+                           int padding = 100;
                            CameraUpdate cu = CameraUpdateFactory.newLatLngBounds(bounds, padding);
                            map.moveCamera(cu);
-                           map.animateCamera(cu);
+                           map.animateCamera(CameraUpdateFactory.zoomTo(14), 2000, null);
                        } catch (IOException e1) {
                            e1.printStackTrace();
                        }
