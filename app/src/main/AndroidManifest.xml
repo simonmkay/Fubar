@@ -51,10 +51,10 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.simonkay.fubar.BarSearchActivity" />
         </activity>
+
         <activity
             android:name=".Details"
-            android:label="@string/title_activity_details"
-            android:parentActivityName=".BarListActivity" >
+            android:label="@string/title_activity_details" >
         </activity>
 
         <meta-data
