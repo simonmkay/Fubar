@@ -73,7 +73,7 @@ public class BarSearchActivity extends ActionBarActivity {
         EditText cityEditText = (EditText) findViewById(R.id.name);
         String city = cityEditText.getText().toString();
         Intent intent = new Intent(this, BarListActivity.class);
-        intent.putExtra("city", city);
+        intent.putExtra("City", city);
         startActivity(intent);
     }
 }

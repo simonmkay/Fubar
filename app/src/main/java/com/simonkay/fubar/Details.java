@@ -72,6 +72,9 @@ public class Details extends ActionBarActivity implements OnMapReadyCallback {
                    textViewCity.setText(parseObject.getString("City"));
                    textViewState.setText(parseObject.getString("State"));
                    textViewZip.setText(parseObject.getString("Zip"));
+                   textViewSpecial1.setText(parseObject.getString("Special"));
+                   textViewSpecial2.setText(parseObject.getString("Special"));
+                   textViewSpecial3.setText(parseObject.getString("Special"));
 
 
                    if(geocoder.isPresent() && parseObject.getString("Address") != "")

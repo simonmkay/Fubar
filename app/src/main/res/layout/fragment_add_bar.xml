@@ -48,17 +48,20 @@
     <EditText
         android:id="@+id/Special1"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:hint="Special"/>
 
     <EditText
         android:id="@+id/Special2"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:hint="Special"/>
 
     <EditText
         android:id="@+id/Special3"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:hint="Special"/>
 
     <Button
         android:layout_width="match_parent"
