@@ -85,20 +85,19 @@ public class BarListActivity extends ActionBarActivity {
             Activity activity = getActivity();
 
             Intent intent = activity.getIntent();
-            final String name = intent.getStringExtra("name");
+            final String city = intent.getStringExtra("City");
 
-            ParseQueryAdapter.QueryFactory<ParseObject> factory =
-                    new ParseQueryAdapter.QueryFactory<ParseObject>() {
+            ParseQueryAdapter.QueryFactory<ParseObject> factory = new ParseQueryAdapter.QueryFactory<ParseObject>() {
                         public ParseQuery create() {
                             ParseQuery query = new ParseQuery("Bar");
-                            query.whereContains("Name", name);
-                            query.orderByAscending("Name");
+                            query.whereContains("City", city);
+                            query.orderByAscending("City");
                             return query;
                         }
                     };
 
             final ParseQueryAdapter parseQueryAdapter = new ParseQueryAdapter(activity, factory);
-            parseQueryAdapter.setTextKey("Name");
+            parseQueryAdapter.setTextKey("City");
 
             ListView barsListView = (ListView) rootView.findViewById(R.id.bars);
             barsListView.setAdapter(parseQueryAdapter);

@@ -14,7 +14,7 @@ import android.widget.EditText;
 
 public class BarSearchActivity extends ActionBarActivity {
 
-    private String name;
+    private String city;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,10 +70,10 @@ public class BarSearchActivity extends ActionBarActivity {
     }
 
     public void submit(View view) {
-        EditText nameEditText = (EditText) findViewById(R.id.name);
-        String name = nameEditText.getText().toString();
+        EditText cityEditText = (EditText) findViewById(R.id.name);
+        String city = cityEditText.getText().toString();
         Intent intent = new Intent(this, BarListActivity.class);
-        intent.putExtra("name", name);
+        intent.putExtra("city", city);
         startActivity(intent);
     }
 }
