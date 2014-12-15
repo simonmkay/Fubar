@@ -5,6 +5,7 @@ import android.app.Application;
 import com.parse.Parse;
 import com.parse.ParseACL;
 import com.parse.ParseCrashReporting;
+import com.parse.ParseTwitterUtils;
 import com.parse.ParseUser;
 
 /**
@@ -30,5 +31,7 @@ public class FubarApplication extends Application {
         defaultACL.setPublicReadAccess(true);
 
         ParseACL.setDefaultACL(defaultACL, true);
+
+        ParseTwitterUtils.initialize("o0ktHjpy170SJcfy9Pm0ByoFO", "22JjHDrgHtdpOb8yxSdHx2LWG7CmdWEyZDP2s0ziFlZHpfLPP4");
     }
 }
